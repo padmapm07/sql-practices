@@ -1,0 +1,13 @@
+create table employee(emp_id int primary key,name varchar(20),department varchar(20)not null,salary int);
+insert into employee values(101,'anju','IT',95000);
+insert into employee values(102,'ashi','finance',65000);
+insert into employee values(103,'ashi','IT',85000);
+insert into employee values(104,'morvitha','art',55000);
+insert into employee values(105,'shivani','doctor',105000);
+insert into employee values(106,'seetha ram','asst. prof.',85000);
+select * from employee;
+update employee set salary=250000 where emp_id=101;
+select distinct department from employee;
+select name,salary from employee order by salary desc;
+select name from employee order by name desc;
+select name,salary from employee order by salary desc limit 2;
