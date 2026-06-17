@@ -1,0 +1,18 @@
+create table employe(emp_id int,name varchar(10),department varchar(10),age int,salary int,city varchar(10));
+insert into employe values(101,'anju','it',23,100000,'mumbai');
+insert into employe values(102,'dashu','govt',23,300000,'mumbai');
+insert into employe values(103,'ashi','teaching',21,100000,'delhi');
+insert into employe values(104,'chandra','ias',23,500000,'bengaluru');
+insert into employe values(105,'chandra','police',23,200000,'bengaluru');
+select * from employe;
+update employe set salary=600000 where emp_id=103;
+select distinct name from employe;
+select name,salary from employe order by salary desc;
+select name,salary from employe order by salary desc limit 3;
+select name, salary+5000 from employe;
+select name, salary-5000 as reduction from employe;
+select name, salary+5000 as total_bonus from employe;
+select name,salary from employe where salary>100000;
+select name,salary,city from employe where salary>200000 and city="mumbai";
+select name,salary,city from employe where salary between 200000 and 300000;
+select name,salary,city from employe where city in ('delhi','mumbai');
