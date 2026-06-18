@@ -1,0 +1,11 @@
+create table sales(sale_id int primary key,name varchar(20),region varcahr(20),product varchar(20),quantity int,amount int);
+insert into sales values(101,'arjun','north','laptop',2,50000);
+insert into sales values(102,'saraha','south','phone',3,25000);
+insert into sales values(103,'saraha','south','tablet',4,55000);
+insert into sales values(104,'mahi','west','laptop',6,355000);
+insert into sales values(105,'arjun','east','phone',4,155000);
+insert into sales values(106,'seetha rama','south','tablet',7,755000);
+select * from sales;
+select product,sum(quantity*amount) as total_revenue from sales group by product  order by total_revenue desc;
+select name,count(*) as total_sales from sales group by name;
+select region,sum(quantity*amount) as total_revenue,avg(quantity*amount) from sales group by region order by total_revenue;
